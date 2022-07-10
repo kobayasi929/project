@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/add.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>登録確認</title>
+</head>
+<body>
+    <header>
+        <div id="h-container">
+            <div class="header-logo">画面サンプル</div>
+            <div id="disc-con">
+                <ul class="ddmenu">
+                    <li><a href="#">アカウント管理</a>
+                       <ul>
+                          <li><a href="changepass.html">パスワード変更</a></li>
+                          <li><a href="#">ログアウト</a></li>
+                       </ul>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+    </header>
+    <form action="add_check.html" method="post">
+    <div id="main">
+        <div id="m-container">
+            <div id="addtitle">―社員情報追加―</div>
+            <table>
+                <tr><th>社員番号<span>必須</span></th><td><input type="text" id="*" name="*"placeholder="(例)E0000" required><br></td></tr>
+                <tr><th>氏名<span>必須</span></th><td>姓<input type="text" id="*" name="*">名<input type="text" id="*" name="*" required></td></tr>
+                <tr><th>氏名(カナ)<span>必須</span></th><td>姓<input type="text" id="*" name="*" required>名<input type="text" id="*" name="*" required></td></tr>
+                <tr><th>性別<span>必須</span></th><td>ラジオボタン入ります</td></tr>
+                <tr><th>生年月日<span>必須</span></th><td>年、月、日入ります</td></tr>
+                <tr><th>部署名</th><td>部署名のプルダウン入ります</td></tr>
+                <tr><th>内線</th><td><input type="text" id="*" name="*"></td></tr>
+                <tr><th>入社日</th><td><input type="text" id="*" name="*"></td></tr>
+            </table>
+            <p>＊上記の内容を確認し、よろしければ登録確認ボタンを押してください</p>
+            <div id="addform">
+            <input type="submit" value="登録確認へ" id="addbutton" style="margin-right: 290px;"><input type="reset" value="リセット">
+            </div>
+        </div>
+    </div>
+    </form>
+</html>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+body{
+    font-size: 1rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+        " header " 100px
+         /1fr  ;
+}
+
+header{
+    border-bottom: 2px solid #ccc;
+    grid-area: header;
+}
+
+#h-container{
+    display: flex;
+    margin: 28px;
+}
+
+#disc-con{
+    display: inline-flex;
+    margin-left: auto;
+}
+
+.info{
+    margin-right: 30px;
+}
+
+
+#head2{
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    grid-area: head2;
+}
+
+#main{
+    border: 1px solid;
+    grid-area: center;
+    /*コメント中央寄せ*/
+    text-align: center;
+    line-height: 400px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    grid-template-rows: 80px;
+    grid-column: 10px;
+    gap: 60px;
+    background: #ccc;
+    margin-top: 10px;
+    /*コメント中央寄せ*/
+    text-align: center;
+    line-height: 75px;
+    padding-left: 30px;
+}
+#item1{
+    border: 1px solid #000;
+}
+#item2{
+   
+    border: 1px solid #000;
+}
+#item3{
+    border: 1px solid #000;
+}
+#item4{
+    border: 1px solid #000;
+}
+
+
+
+nav{
+    border: 1px solid;
+    grid-area: left;
+}
+aside{
+    border: 1px solid;
+    grid-area: right;
+}
+
+footer{
+    border: 1px solid;
+    grid-area: footer;
+}

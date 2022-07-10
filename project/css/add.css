@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+#main{
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 85vh;
+}
+
+#m-container{
+    margin-top: 50px;
+    width: 100%;
+    min-height: 70vh;
+    background: #fff;
+}
+
+#addtitle{
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+table{
+    border: 2px solid #ABABAB;
+    border-collapse: collapse;
+    width: 100%;
+}
+span{
+    font-size: 12px;
+    color: red;
+}
+th,td{
+    border-bottom: 1px solid #ABABAB;
+}
+th{
+    border-right: 1px solid #ABABAB;
+    background: cornsilk;
+    padding: 0;
+    height: 60px;
+    width: 200px;
+    text-align: left;  
+}
+td{
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+#addform{
+    margin-left: 340px;
+}
+#addbutton{
+    width: 100px;
+    font-size: 16px;
+   
+}
