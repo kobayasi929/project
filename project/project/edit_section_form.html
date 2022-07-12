@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/add.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>登録確認</title>
+    <style>
+        #sec-title{
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 10px;;
+            margin-bottom: 10px;
+        }
+        #sec-a {
+        margin-left: 20px;
+        display       : inline-block;
+        border-radius : 5%;          /* 角丸       */
+        font-size     : 12pt;        /* 文字サイズ */
+        font-weight: 600;
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        padding       : 8px 8px;   /* 余白       */
+        background    : #ffff99;     /* 背景色     */
+        color         : #000000;     /* 文字色     */
+        line-height   : 1em;         /* 1行の高さ  */
+        transition    : .3s;         /* なめらか変化 */ 
+        box-shadow    : 3px 3px 1px #666666;  /* 影の設定 */
+        border        : 2px solid #ffff99;    /* 枠の指定 */
+        }
+        #sec-a:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        color         : #ffff99;     /* 背景色     */
+        background    : #000000;     /* 文字色     */
+        }
+        #sec-form{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #sec-res{
+            margin-bottom: 20px;
+        }
+        #sec-b{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sec-con">
+        <div id="sec-form">
+            <div id="sec-title">―部署情報編集―</div>
+            <div id="sec-res">変更する部署を選択してください。<br>部署情報を追加する場合はこちらをクリック→<a href="add_section_form.html" id="sec-a">追加ページへ</a></div>
+            <table>
+                <tr><th>部署名</th><td>※ここに編集ボタンが入る</td>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

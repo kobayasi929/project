@@ -1,0 +1,65 @@
+
+h1 {
+    font-family: "system-ui";
+    position: relative;
+    background: #ffd98a;
+    padding: 2px 5px 2px 25px;
+    font-size: 35px;
+    color: #474747;
+    border-radius: 0 10px 10px 0;
+    padding-left: 80px;
+}
+
+h2:first-letter {
+    font-size: 150%;
+    color: #eb6100;
+}
+
+  .b,.c,.d,.e{
+    margin-top: 60px;
+}
+
+  h1:before {
+    font-family: "Font Awesome 5 Free";
+   
+    display: inline-block;
+    line-height: 40px;
+    position: absolute;
+    padding: 0em;
+    color: white;
+    background: #ffa337;
+    font-weight: 900;
+    padding-top: 20px;
+    width: 80px;
+    text-align: center;
+    height: 60px;
+    line-height: 40px;
+    left: -1.35em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: solid 3px white; 
+    border-radius: 50%;
+  }
+
+  .a:before{
+    content: "\f2b9";
+  }
+  .b:before{
+    content: "\f044";
+  }
+  .c:before{
+    content: "\f02d";
+  }
+  .d:before{
+    content: "\f14b";
+  }
+  .e:before{
+    content: "\f1ec";
+  }
+.pages{
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+

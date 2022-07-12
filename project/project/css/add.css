@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+#main{
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 85vh;
+}
+
+#m-container{
+    margin-top: 50px;
+    width: 100%;
+    min-height: 70vh;
+    background: #fff;
+}
+
+#addtitle{
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+table{
+    border: 2px solid #ABABAB;
+    border-collapse: collapse;
+    width: 100%;
+}
+span{
+    font-size: 12px;
+    color: red;
+}
+th,td{
+    border-bottom: 1px solid #ABABAB;
+}
+th{
+    border-right: 1px solid #ABABAB;
+    background: cornsilk;
+    padding: 0;
+    height: 60px;
+    width: 200px;
+    text-align: left;  
+}
+td{
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+#addform{
+    margin-left: 340px;
+}
+#addbutton{
+    width: 100px;
+    font-size: 16px;
+   
+}
+
+/*ここからsection*/
+#sec-title{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;;
+    margin-bottom: 10px;
+}
+#sec-a {
+margin-left: 20px;
+display       : inline-block;
+border-radius : 5%;          /* 角丸       */
+font-size     : 12pt;        /* 文字サイズ */
+font-weight: 600;
+text-align    : center;      /* 文字位置   */
+cursor        : pointer;     /* カーソル   */
+padding       : 8px 8px;   /* 余白       */
+background    : #ffff99;     /* 背景色     */
+color         : #000000;     /* 文字色     */
+line-height   : 1em;         /* 1行の高さ  */
+transition    : .3s;         /* なめらか変化 */ 
+box-shadow    : 3px 3px 1px #666666;  /* 影の設定 */
+border        : 2px solid #ffff99;    /* 枠の指定 */
+}
+#sec-a:hover {
+box-shadow    : none;        /* カーソル時の影消去 */
+color         : #ffff99;     /* 背景色     */
+background    : #000000;     /* 文字色     */
+}
+#sec-form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#sec-res{
+    margin-bottom: 10px;
+}
+#sec-b{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
