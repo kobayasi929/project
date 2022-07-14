@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
@@ -12,6 +13,24 @@
         li{
             list-style: none;
         }
+
+        .korokoro {
+  animation: korokoro 2.5s linear 0s 1;
+}
+
+@keyframes korokoro {
+  0%   { transform: translate(0%, 0%); }
+  5%   { transform: translate(10%, 0%) rotate(10deg); }
+  25%  { transform: translate(20%, 0%) rotate(20deg); }
+  30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+  35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+  45%  { transform: translate(10%, 0%) rotate(10deg); }
+  50%  { transform: translate(15%, 0%) rotate(15deg); }
+  60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+  65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+  75%  { transform: translate(0%, 0%) rotate(0deg); }
+  100% { transform: translate(0%, 0%) rotate(0deg); }
+}
     </style>
 
     <title>ホーム</title>
@@ -26,7 +45,7 @@
         </div>
     </header>
     <div id="head2">
-        <section id="container" style="border-bottom: 1px solid #ababab;">
+        <section id="container" style="border-bottom: 1px solid #ababab; display: none;">
             <a href="#"><div id="item1">社員情報検索</div></a>
             <a href="#"><div id="item2">社員情報追加</div></a>
             <a href="#"><div id="item3">部署情報検索</div></a>
@@ -40,19 +59,15 @@
                 </li>
             </ul>
         </section>
-        <nav style="width: 20%; margin-left: 16%;">
-            <ul class="menu-info">
-                <li><a href="#" style="font-weight: 600;">機能一覧</a>
-                    <ul class="submenu">
-                        <li><a href="#">社員情報検索</a></li>
-                        <li><a href="#">社員情報追加</a></li>
-                        <li><a href="#">部署情報検索</a></li>
-                        <li><a href="#">部署情報追加</a></li>
-                        <li><a href="#">経費精算</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+       <!--ここからコピー-->
+       <div id="container" style="display: block; margin-top: 0; background: darkslategrey;">
+        <div class="text">
+            <h3 class="title">
+              <span style="font-size: 25px;" id="realtime"> </span>
+            </h3>
+        </div>
+    </div>
+        
         <div id="inform" >
             <nav>
                 <ul class="menu">
@@ -67,7 +82,16 @@
             </nav>
         </div>
     </div>
-  
+    <div id="grid-main">
+        <div id="a"><a href="#"><br>社員情報検索</a></div>
+        <div id="b"><a href="#"><br>社員情報追加</a></div>
+        <div id="c"><a href="#"><br>部署情報編集</a></div>
+        <div id="d"><a href="#"><br>部署情報追加</a></div>
+        <div id="e"><a href="#"><br>経費申請</a></div>
+        <div id="f"><a href="#"><br>経費申請承認一覧</a></div>
+        <div id="g"><a href="#"><br>経費申請処理</a></div>
+        <div id=""><image src="images/himawari.png" style="width: 100%;height: 100%;border-radius: 1rem;" class="korokoro"></image></div>
+    </div>
 </body>
 <script src="js/logout.js"></script>
 </html>

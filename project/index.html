@@ -6,43 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <title>ホーム</title>
+    <style>
+        #page-top {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index:100;
+    }
+    #page-top a {
+        background: #000 none repeat scroll 0 0;
+        border:1px solid #fff;
+        border-radius: 50%;
+        display: block;
+        padding: 5px 8px;
+        text-align: center;
+        width: auto;
+        cursor:pointer;
+        color:#fff;
+        font-size:16px;
+    }
+    #page-top a:hover {
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+
+
+    </style>
 </head>
 <body>
-  <header>
-    <div id="h-container">
-        <div class="header-logo">画面サンプル</div>
-    </div>
-    <div id="content">
-        <div id="welcome">総務部<br>佐々木遼太さん</div>
-    </div>
-</header>
-<div id="head2">
-    <div id="inform" style="border-bottom: 1px solid #ababab;">
-        <nav>
-            <ul class="menu">
-                <li><a href="#" style="font-weight: 600;">アカウント管理</a>
-                    <ul class="submenu" style="margin: 0; padding: 0; display: contents; ">
-                        <li><a href="#">パスワード変更</a></li>
-                        <li><a href="#">アカウント情報</a></li>
-                        <li id="logout"><a href="#">ログアウト</a></li>
+    <header>
+        <div id="h-container">
+            <div class="header-logo">ここに商品名タイトルを入れる</div>
+        </div>
+        <div id="content">
+            <div id="welcome">総務部<br>佐々木遼太さん</div>
+        </div>
+    </header>
+    <div id="head2">
+        <section id="container" style="border-bottom: 1px solid #ababab; display: none;">
+            <a href="#"><div id="item1">社員情報検索</div></a>
+            <a href="#"><div id="item2">社員情報追加</div></a>
+            <a href="#"><div id="item3">部署情報検索</div></a>
+            <a href="#"><div id="item4">部署情報追加</div></a>
+                <li class="menu-num"><a href="#" class="menu-num"><div id="item5" class="menu-num">経費精算</div></a>
+                    <ul class="submenu">
+                        <li class="n"><a href="#">経費申請</a></li>
+                        <li class="n"><a href="#">経費申請承認一覧</a></li>
+                        <li class="n"><a href="#">経費申請処理 </a></li>
                     </ul>
                 </li>
             </ul>
-        </nav>
-    </div>
-</div>
-    <div id="main">
-        <div class="pages">
-            <a href="#" ><h1 class="a" id="box1">社員情報検索</h1></a>
-            <a href="add_form.html"><h1 class="b" id="box2">社員情報追加</h1></a>
-            <a href="#"><h1 class="c" id="box3">部署情報検索</h1></a>
-            <a href="#"><h1 class="d" id="box4">部署情報追加</h1></a>
-            <a href="#"><h1 class="e" id="box5">経費精算</h1></a>
+        </section>
+        <!--ここからコピー-->
+        <div id="container" style="display: block; margin-top: 0; background: darkslategrey;">
+            <div class="text">
+                <h3 class="title">
+                  <span style="font-size: 25px;" id="realtime"> </span>
+                </h3>
+            </div>
+        </div>
+        <p id="realtime"></p>
+        <div id="inform" >
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" style="font-weight: 600;">アカウント管理</a>
+                        <ul class="submenu">
+                            <li><a href="#">パスワード変更</a></li>
+                            <li><a href="#">アカウント情報</a></li>
+                            <li id="logout"><a href="#">ログアウト</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
+    <div id="main">
+        <div class="pages">
+            <a href="#" ><h1 class="a" id="box1"style="line-height: 80px;">社員情報検索</h1></a>
+            <a href="#"><h1 class="e" id="box2"style="line-height: 80px;">経費申請</h1></a>
+            <a href="#"><h1 class="f" id="box3"style="line-height: 80px;">経費申請承認一覧</h1></a>
+            <a href="#"><h1 class="g" id="box4"style="line-height: 80px;">経費申請処理</h1></a>
+        </div>
+    </div>
+    <div id="page-top">
+        <p><a href="#" id="move-page-top">▲</a></p>
+    </div>
 </body>
+<script type="text/javascript">
+//スクロールトップ
+    function twoDigit(num) {
+      let ret;
+      if( num < 10 ) 
+        ret = "0" + num; 
+      else 
+        ret = num; 
+      return ret;
+    }
+    function showClock() {
+    var hiduke=new Date(); 
+
+    //年・月・日・曜日を取得する
+    var year = hiduke.getFullYear();
+    var month = hiduke.getMonth()+1;
+    var week = hiduke.getDay();
+    var day = hiduke.getDate();
+
+    var yobi= new Array("日","月","火","水","木","金","土");
+      document.getElementById("realtime").innerHTML = year+"年"+month+"月"+day+"日 "+yobi[week]+"曜日";
+    }
+    setInterval('showClock()',100);
+
+$(function() {
+    var topBtn = $('#page-top');   
+    topBtn.hide();
+    //スクロールが100pxに達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+
+const CLASSNAME = "-visible";
+const TIMEOUT = 1500;
+const DELAY = 300;
+const $target1 = $(".title");
+const $target2 = $(".sentence");
+
+setInterval(() => {
+  $target1.addClass(CLASSNAME);
+  setTimeout(() => {
+    $target2.addClass(CLASSNAME);
+  }, DELAY);
+
+}, TIMEOUT * 2);
+
+
+</script>
 </html>

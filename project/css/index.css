@@ -15,8 +15,17 @@ h2:first-letter {
     color: #eb6100;
 }
 
-  .b,.c,.d,.e{
-    margin-top: 60px;
+  .b,.c,.d,.e,.f,.g{
+    margin-top: 40px;
+    transition: 0.5s;
+}
+
+.a{
+  transition: 0.5s;
+}
+.a:hover,.b:hover,.c:hover,.d:hover,
+.e:hover,.f:hover,.g:hover{
+  background: orange;
 }
 
   h1:before {
@@ -32,7 +41,7 @@ h2:first-letter {
     padding-top: 20px;
     width: 80px;
     text-align: center;
-    height: 60px;
+    height: 80px;
     line-height: 40px;
     left: -1.35em;
     top: 50%;
@@ -57,9 +66,135 @@ h2:first-letter {
   .e:before{
     content: "\f1ec";
   }
+  .f::before{
+    content: "\f14a";
+}
+  .g::before{
+    content: "\f5ae";
+}
 .pages{
     max-width: 450px;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 20px;
+}
+/*管理者*/
+
+#grid-main{
+  display: grid;
+  grid-template-columns: repeat(4,20%);
+  grid-template-rows: 150px 150px;
+  grid-column: 10px;
+  gap: 60px;
+  /*コメント中央寄せ*/
+  text-align: center;
+  line-height: 50px;
+  padding-left: 30px;
+  margin-top: 90px;
 }
 
+#grid-main br {
+  display: block;
+  content: "";
+  margin: -30px 0;
+}
+#grid-main a{
+  font-size: 28px;
+  color: #474747;
+  font-weight: 600;
+  font-family:"system-ui";
+}
+#a,#b,#c,#d,#e,#f,#g,#h{
+  border: 1px solid #ababab;
+  background: #ffd98a;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
+#a:hover,#b:hover,#c:hover,#d:hover,
+#e:hover,#f:hover,#g:hover{
+  background: orange;
+}
+
+#a::before,#b::before,#c::before,#d::before,
+#e::before,#f::before,#g::before{
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  line-height: 40px;
+  padding: 0em;
+  color: white;
+  background: #ffa337;
+  font-weight: 900;
+  width: 90px;
+  text-align: center;
+  height: 90px;
+  line-height: 40px;
+  left: -1.35em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: solid 3px white; 
+  border-radius: 50%;
+  font-size: 50px;
+  padding-top: 20px;
+}
+
+
+#a:before{
+  content: "\f2b9";
+}
+#b:before{
+  content: "\f044";
+}
+#c:before{
+  content: "\f02d";
+}
+#d:before{
+  content: "\f14b";
+}
+#e:before{
+  content: "\f1ec";  
+}
+#f::before{
+  content: "\f14a";
+}
+#g::before{
+  content: "\f5ae";
+}
+
+.title {
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  color: #f9d807;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.title span {
+  display: block;
+  transform: translate(100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+.title.-visible,
+.title.-visible span {
+  transform: translate(0, 0);
+}
+
+.sentence {
+  overflow: hidden;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  font-family: "Yu Gothic Medium";
+  font-size: 16px;
+  text-align: center;
+}
+
+.sentence span {
+  display: block;
+  transform: translate(100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+.sentence.-visible,
+.sentence.-visible span {
+  transform: translate(0, 0);
+}

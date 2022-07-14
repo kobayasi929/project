@@ -44,5 +44,26 @@
             </table>
         </div>
     </div>
+    <form action="#" onsubmit="return check()">
+    <input type="text" id="pass"><input type="submit" value="sousin">
+    </form>
 </body>
+<script>
+    function check(){
+        var pass = document.getElementById("pass").value;
+        var check = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$';
+        if(pass.match(check)){
+            var log = window.confirm("パスワードを変更しますがよろしいですか？");
+            if(log){
+                return true;
+            }else{
+                return false;
+            }
+            
+        }else{
+            alert("大文字、小文字、数字、記号を全て含んだ8文字以上のパスワードを設定してください");
+            return false;
+        }
+    }
+</script>
 </html>
